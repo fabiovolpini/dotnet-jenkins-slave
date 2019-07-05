@@ -38,7 +38,7 @@ RUN INSTALL_PKGS="rh-dotnet22 rh-nodejs8-npm" && \
     
 WORKDIR /
 # Install dotnet-sonarscanner tool
-RUN /usr/bin/dotnet tool install --global dotnet-sonarscanner
+RUN dotnet tool install --global dotnet-sonarscanner
 
 ENV PATH="${PATH}:$HOME/.dotnet/tools"
 
