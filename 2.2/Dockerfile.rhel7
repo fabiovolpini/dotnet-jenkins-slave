@@ -36,7 +36,7 @@ RUN INSTALL_PKGS="rh-dotnet22 rh-nodejs8-npm" && \
 # yum cache files may still exist (and quite large in size)
     rm -rf /var/cache/yum/* && \
 # Install dotnet-sonarscanner tool
-    dotnet tool install --global dotnet-sonarscanner
+    /usr/bin/dotnet tool install --global dotnet-sonarscanner
 
 ENV PATH="${PATH}:$HOME/.dotnet/tools"
 
